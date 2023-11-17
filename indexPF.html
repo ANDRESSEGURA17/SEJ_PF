@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Actividades - Departamento de Bienestar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #007bff; 
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: orange;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #logo {
+            width: 100px; 
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0; 
+        }
+
+        .info-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            width: 100%;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .SEF-info-box {
+            flex: 1;
+            background-color: #007bff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0; 
+            max-width: 500px; 
+        }
+
+        .SEF-info-image {
+            flex: 1;
+            width: 100%; 
+            border-radius: 5px;
+            margin-bottom: 0; 
+            max-height: 500px;
+        }
+
+        .SEF-oval-button {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .SEF-oval-button:hover {
+            background-color: #ddd;
+        }
+
+        .logos-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .SEF-logo-item {
+            text-align: center;
+            width: 100%;
+        }
+
+        .SEF-logo-item img {
+            width: 50px; 
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .SEF-side-images-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .SEF-side-images img {
+            width: 48%; 
+            border-radius: 5px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .SEF-nav-button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .SEF-nav-button:hover {
+            background-color: #ddd;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: orange;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #343a40;
+            font-weight: bold;
+            background-color: orange;
+        }
+        .SEF-oval-box {
+            background-color:white;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .SEF-footer-text {
+            margin: 0;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="culBU.jpeg" alt="Logo del Departamento de Bienestar">
+        <h1>Departamento de Bienestar</h1>
+    </header>
+
+    <nav>
+        <button class="SEF-nav-button btn" onclick="showSection('servicios')">Servicios</button>
+        <button class="SEF-nav-button btn" onclick="showSection('usuarios')">Usuarios</button>
+        <button class="SEF-nav-button btn" onclick="showSection('Actividades')">Actividades</button>
+        <button class="SEF-nav-button btn" onclick="showSection('equipo')">Equipo</button>
+        <button class="SEF-nav-button btn" onclick="showSection('videos')">Videos</button>
+        <button class="SEF-nav-button btn" onclick="showSection('contactenos')">Contactenos</button>
+    </nav>
+    <section id="servicios" class="mb-4">
+        <h2>Servicios</h2>
+        <div class="info-container d-flex align-items-center">
+            <div class="SEF-info-box">
+                <p>El departamento de bienestar generalmente ofrece una variedad de servicios 
+                    para apoyar el bienestar integral de los estudiantes. 
+                    Esto incluye servicios de asesoramiento psicológico, 
+                    atención médica básica, programas de prevención para 
+                    la salud mental, apoyo académico, asesoramiento financiero,
+                     orientación profesional, actividades recreativas y culturales, 
+                     servicios para estudiantes con discapacidades, y más. 
+                     La gama de servicios puede variar según la universidad,
+                      pero el objetivo es proporcionar un entorno de apoyo para 
+                      el éxito académico y personal de los estudiantes.</p>
+            </div>
+            <div class="SEF-info-image">
+                <img src="Servicios.jpg" alt="Imagen de Servicios">
+            </div>
+        </div>
+    </section>
+
+    <section id="usuarios" class="mb-4">
+        <h2>Usuarios</h2>
+        <div class="info-container d-flex align-items-center">
+            <div class="SEF-info-box">
+                <p>Los usuarios que participan en un departamento de bienestar 
+                    incluyen principalmente a 
+                    los estudiantes, quienes buscan apoyo emocional, 
+                    académico y de salud. El personal del departamento, 
+                    como psicólogos, consejeros y asesores, 
+                    desempeña un papel clave en la prestación de servicios.
+                     También puede haber interacción con el personal docente y 
+                     administrativo, así como con las familias de los estudiantes
+                      en ciertos casos. La colaboración con otros servicios universitarios, 
+                      como el centro de carreras, el departamento de vivienda estudiantil, 
+                      y otros, puede ser parte del enfoque integral para abordar las diversas
+                       necesidades de los estudiantes. La participación activa de estos usuarios 
+                       contribuye a crear un entorno de apoyo que promueve el bienestar estudiantil 
+                       en todas las áreas de su experiencia universitaria.</p>
+            </div>
+            <div class="SEF-info-image">
+                <img src="Usuarioa.jpg" alt="Imagen de Usuarios">
+            </div>
+        </div>
+    </section>
+    <section id="Actividades" class="mb-4">
+        <h2>Actividades</h2>
+        <div class="info-container d-flex align-items-center">
+            <div class="SEF-info-box">
+             <p>GRAN NOCHE DE LUNA FOLCLÓRICA 2023-1</p>
+             <p>Al ritmo de tambores, flauta y folclor, estudiantes, administrativos 
+                y colaboradores disfrutaron de este espacio cultural donde participó el 
+                grupo de danza: Tunsé y el grupo de música: Macumbé.
+               Agradecemos y valoramos el esfuerzo y dedicación de 
+               nuestros instructores y estudiantes para la presentación 
+               de esta muestra artística y folclórica. Buscando fortalecer 
+               el ser integral de nuestra comunidad</p>   
+            </div>
+            <div class="SEF-info-image">
+                <img src="Actividadescul.jpg" alt="Imagen de Actividades">
+            </div>
+        </div>
+    </section>
+    <section id="equipo" class="mb-4">
+        <h2>Equipo</h2>
+        <div class="info-container d-flex align-items-center">
+            <div class="SEF-info-box">
+                <p>Juegos universitarios regionales ASCUN Valledupar 2023</p>
+                <p>Las diferentes disciplinas deportivas aportan a la formación integral de nuestros 
+                estudiantes, contribuyendo al fortalecimiento de valores y al crecimiento en las diferentes 
+                áreas de su vida. Exaltamos la participación y representación de nuestros estudiantes en la 
+                versión XXV de los juegos universitarios regionales ASCUN Valledupar 2023.
+                Durante esta versión tuvimos participación por parte de las siguientes disciplina: 
+                -Ajedrez masculino, atletismo masculino, judo masculino, karate-Do masculino, 
+                evantamiento de pesas masculino, levantamiento de pesas femenino, taekwondo femenino, 
+                taekwondo masculino, voleibol femenino, baloncesto masculino y fútbol sala masculino. 
+                ¡Felicitaciones estudiantes son orgullo CUL!</p>    
+            </div>
+            <div class="SEF-info-image">
+                <img src="Equipo.jpg" alt="Imagen de Equipo">
+            </div>
+        </div>
+    </section>
+    <section id="videos" class="mb-4">
+        <h2>Videos</h2>
+        <div class="info-container d-flex align-items-center">
+            <div class="SEF-info-box">
+                <p>Cononce los servicios de bienestar</p>
+                <iframe width="450" height="300" src="https://www.youtube.com/embed/n_c0HcoblCg" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="SEF-info-image">
+                <img src="videos.jpg" alt="Imagen de Videos">
+            </div>
+        </div>
+    </section>
+    <section id="contactenos" class="mb-4">
+        <h2>Contactenos</h2>
+        <div class="info-container d-flex align-items-center">
+            <div class="SEF-info-box">
+                <p> Calle 58 # 55 - 24A  Barranquilla - Colombia <p>
+                 <p>ANDRES FELIPE SEGURA ANGULO</p>
+                 <p>ANDREW DE JESUS ECHEVERRIA PALACIO</p>
+                 <P>JORGE FABIAN PAEZ SANCHEZ</P>
+                 <p>Proceso de admisión</p>
+                 <p>Celular (+57) 314 8962734</p>
+                 <p>Correo promocion@ul.edu.co</p> 
+                 <p>Proceso de transferencia y reintegro</p> 
+                 <p>Celular (+57) 317 6688650</p>
+                 <p>kilarioss@ul.edu.co</p>
+            </div>
+            <div class="SEF-info-image">
+                <img src="contactenos.png" alt="Imagen de Contactenos">
+            </div>
+        </div>
+    </section>
+    <div style="display: flex; justify-content: space-between; margin-top: 1px; width: 80%;">
+        <img src="cul.jpeg" alt="Imagen izquierda" style="width: 48%; border-radius: 5px;">
+        <img src="bienestar.jpeg" alt="Imagen derecha" style="width: 48%; border-radius: 5px;">
+    </div>
+    <a href="#" class="SEF-oval-button">Leer más</a>
+    <div class="logos-container">   
+        <div class="SEF-logo-item">
+            <img src="logo1.png" alt="Logo 1">
+            <p>Equipo de Bienestar</p>
+        </div>
+        <div class="SEF-logo-item">
+            <img src="logo2.png" alt="Logo 2">
+            <p>Asesoría Psicológica</p>
+        </div>
+        <div class="SEF-logo-item">
+            <img src="logo3.png" alt="Logo 3">
+            <p>Asesoría a la Preparación Laboral</p>
+        </div>
+        <div class="SEF-logo-item">
+            <img src="logo4.png" alt="Logo 4">
+            <p>Política</p>
+        </div>
+        <div class="SEF-logo-item">
+            <img src="logo5.png" alt="Logo 5">
+            <p>Facebook</p>
+        </div>
+        <div class="SEF-logo-item">
+            <img src="logo6.png" alt="Logo 6">
+            <p>Instagram</p>
+        </div>
+        <div class="SEF-oval-box">
+            <p class="SEF-footer-text">@Hecho por ANDRES FELIPE SEGURA ANGULO, ANDREW DE JESUS ECHEVERRIA PALACIO, y JORGE FABIAN PAEZ</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('servicios');
+        });
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`.nav-button[data-section="${sectionId}"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
